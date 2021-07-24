@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <title>Testing VideoJS</title>
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
-    
+    <link href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css" rel="stylesheet" />    
+
     <!-- City -->
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
 
@@ -27,6 +28,9 @@
     <script src="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
     <script src="https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/videojs-contrib-quality-levels.min.js"></script>
     <script src="https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/videojs-hls-quality-selector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js"></script>
+    
+
     <script>
         var options = {
             controls: true,
@@ -49,6 +53,10 @@
         var player = videojs('example-video', options);
         player.hlsQualitySelector({
             displayCurrentQuality: true,
+        });
+        player.seekButtons({
+            forward: 30,
+            back: 10
         });
     </script>
 </body>
