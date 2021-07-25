@@ -3,10 +3,11 @@ var options = {
     //autoplay: 'muted',
     fluid: true,
     playbackRates: [0.5, 1, 1.5, 2],
+    inactivityTimeout: 0, //Prevent auto-hide player controls
     poster: 'https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8.jpg',
     controlBar: {
-        volumePanel: {
-        inline: false
+            volumePanel: {
+            inline: false
         }
     },
     html5: {
@@ -23,6 +24,7 @@ videojs.Html5Hlsjs.addHook('beforeinitialize', (videojsPlayer, hlsjsInstance) =>
 
 var player = videojs('example-video', options);
 
+//Prevent console error in Mozilla.
 player.src({
     src: 'https://video.acharyaprashant.org/sarvasar-upanishad-part-one-video-5/playlist.m3u8',
     type: 'application/x-mpegURL'
@@ -30,7 +32,7 @@ player.src({
 
 player.hlsQualitySelector({
     displayCurrentQuality: true,
-    placementIndex: 4
+    placementIndex: 0    
 });
 
 player.seekButtons({
