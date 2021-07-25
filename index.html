@@ -4,6 +4,7 @@
     <title>Testing VideoJS</title>
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css" rel="stylesheet" />    
+    <link href="./videojs-hls-quality-selector.css" rel="stylesheet" />
 
     <!-- City -->
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
@@ -58,12 +59,14 @@
         
         player.hlsQualitySelector({
             displayCurrentQuality: true,
-            placementIndex: 2
+            placementIndex: 4
         });
 
         player.seekButtons({
             forward: 10,
-            back: 10
+            back: 10,
+            forwardIndex: 2,
+            backIndex: 0
         });
 
     </script>
