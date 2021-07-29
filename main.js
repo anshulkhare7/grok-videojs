@@ -4,12 +4,11 @@ function myDoubleClickHandler(event) {
 };
 
 var options = {
-    controls: true,
-    //autoplay: 'muted',
+    width: 600, 
+    height: 300, 
+    controls: true,    
     fluid: true,
-    playbackRates: [0.5, 1, 1.5, 2],
-    inactivityTimeout: 0, //Prevents auto-hide player controls
-    // nativeControlsForTouch: true,    
+    playbackRates: [0.5, 1, 1.5, 2],    
     userActions: {
         doubleClick: myDoubleClickHandler
     },
@@ -24,6 +23,9 @@ var options = {
             debug: true
         }
     }
+    //autoplay: 'muted',
+    //inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)
+    //nativeControlsForTouch: true,    
 };
 
 
@@ -38,6 +40,7 @@ var player = videojs('ap-video', options);
 // player.addClass('vjs-theme-city')
 player.addClass('vjs-theme-ap')
 player.addClass('vjs-big-play-centered')
+player.addClass('vjs-show-big-play-button-on-pause')
 
 //Prevent console error in Mozilla.
 player.src({
