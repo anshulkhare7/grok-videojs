@@ -1,0 +1,102 @@
+.vjs-theme-ap {
+    --vjs-theme-ap--primary: blue;
+    --vjs-theme-ap--secondary: #fff;
+  }
+
+.vjs-theme-ap .vjs-picture-in-picture-control{
+    display: none;
+}
+
+.vjs-theme-ap .vjs-current-time{
+    display: block;
+}
+
+.vjs-theme-ap .vjs-time-divider{
+    display: block;
+    min-width: 0;
+    padding: 0;
+}
+
+.vjs-theme-ap .vjs-duration{
+    display: block;
+}
+
+.vjs-theme-ap .vjs-progress-control{    
+    position: absolute;    
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.vjs-theme-ap .vjs-play-progress {
+    background-color: var(--vjs-theme-ap--primary);
+}
+  
+.vjs-theme-ap .vjs-volume-panel{
+    order: 1;
+}
+
+/* .vjs-theme-ap .vjs-progress-control .vjs-progress-holder {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  } */
+
+.vjs-theme-ap .vjs-remaining-time{
+    display: none;
+}
+
+.vjs-theme-ap .vjs-time-control {
+    /* line-height: 5em; */
+}
+
+.vjs-theme-ap .vjs-playback-rate{
+    order: 2;
+}
+
+.vjs-theme-ap .vjs-playback-rate-value{
+    /* font-size: 1.3em;
+    margin-top: 0.9em; */
+}
+
+.vjs-theme-ap .vjs-quality-selector{
+    font-size: 18px;
+    order: 3;
+}
+
+.vjs-theme-ap .vjs-fullscreen-control{
+    order: 4;
+}
+
+.vjs-theme-ap .vjs-seek-button.skip-back{
+    background-image: url(https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/skip-back-10-white.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    margin: 10 0 0 8px;   
+    width: 2em; 
+}
+
+.vjs-theme-ap .vjs-seek-button.skip-forward{
+    background-image: url(https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/skip-fwd-10-white.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    margin: 10 0 0 8px;    
+    width: 2em; 
+}
+
+.vjs-theme-ap .vjs-control-bar {
+    font-size: 15px;
+    height: 70px;
+    padding-top: 20px;
+    background: none;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+  }
+
+.vjs-theme-ap .vjs-button > .vjs-icon-placeholder::before {
+    line-height: 50px;
+}
