@@ -1,5 +1,5 @@
 .vjs-theme-ap {
-    --vjs-theme-ap--primary: blue;
+    --vjs-theme-ap--primary: #7EC8E3;
     --vjs-theme-ap--secondary: #fff;
   }
 
@@ -7,8 +7,14 @@
       font-size: 8em;
   }
 
+  .vjs-theme-ap:hover .vjs-big-play-button,
+  .vjs-theme-ap.vjs-big-play-button:focus {
+    background-color: var(--vjs-theme-ap--primary);
+    color: #fff;
+  }
+
   .vjs-theme-ap .vjs-control-bar {
-    font-size: 30px;
+    font-size: 25px;
     height: 70px;
     padding-top: 20px;
     background: none;
@@ -41,15 +47,12 @@
     width: 100%;
     height: 0;
 }
-
-.vjs-theme-ap .vjs-play-progress {
-    background-color: var(--vjs-theme-ap--primary);
-}
   
 .vjs-theme-ap .vjs-volume-panel{
     order: 1;
     font-size: 0.7em;
 }
+
 
 /* .vjs-theme-ap .vjs-progress-control .vjs-progress-holder {
     position: absolute;
@@ -90,17 +93,28 @@
 .vjs-theme-ap .vjs-seek-button.skip-back{
     background-image: url(https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/skip-back-10-white.png);
     background-repeat: no-repeat;
-    background-size: 45px;
+    background-size: 40px;
     margin: 0 0 0 1em;   
     width: 2em; 
+    border-radius: 2px;
+}
+
+.vjs-theme-ap .vjs-seek-button:hover,
+.vjs-theme-ap .vjs-playback-rate:hover,
+.vjs-theme-ap .vjs-volume-panel:hover,
+.vjs-theme-ap .vjs-quality-selector:hover,
+.vjs-theme-ap .vjs-play-progress {
+    background-color: var(--vjs-theme-ap--primary);
+    color: #fff;
 }
 
 .vjs-theme-ap .vjs-seek-button.skip-forward{
     background-image: url(https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/skip-fwd-10-white.png);
     background-repeat: no-repeat;
-    background-size: 45px;
+    background-size: 40px;
     margin: 0 0 0 1em;     
     width: 2em; 
+    border-radius: 2px;
 }
 
 .vjs-theme-ap .vjs-button > .vjs-icon-placeholder::before {
