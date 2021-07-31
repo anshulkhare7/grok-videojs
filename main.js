@@ -60,3 +60,16 @@ player.seekButtons({
     forwardIndex: 1,
     backIndex: 0
 });
+
+player.overlay({
+    // content: 'Default overlay content',
+    // debug: true,
+    overlays: [{
+      content: '',
+      start: 60,
+      end: 120,
+      align: 'top-left',
+      showBackground: true,
+      class: 'overlay'
+    }]
+  });
