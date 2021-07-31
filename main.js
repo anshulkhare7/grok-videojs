@@ -24,7 +24,7 @@ var options = {
         }
     },
     //autoplay: 'muted',
-    inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)
+    // inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)
     //nativeControlsForTouch: true,    
 };
 
