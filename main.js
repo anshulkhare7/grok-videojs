@@ -19,26 +19,19 @@ var options = {
                 inline: false
             }
     },
-    html5: {
-        hlsjsConfig: {                    
-            debug: true
-        }
-    },
     //autoplay: 'muted',
     // inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)
-    //nativeControlsForTouch: true,    
+    html5: {
+      
+    },    
+    //nativeControlsForTouch: true,        
 };
 
 
 
-// setup beforeinitialize hook
-videojs.Html5Hlsjs.addHook('beforeinitialize', (videojsPlayer, hlsjsInstance) => {
-    // here you can interact with hls.js instance and/or video.js playback is initialized
-});
-
 var player = videojs('ap-video', options);
 
-// player.addClass('vjs-theme-city')
+// player.playsinline(true)
 player.addClass('vjs-theme-ap')
 player.addClass('vjs-big-play-centered')
 player.addClass('vjs-show-big-play-button-on-pause')
@@ -61,15 +54,30 @@ player.seekButtons({
     backIndex: 0
 });
 
+//Brightcover overlay cards - https://www.npmjs.com/package/videojs-overlay
 player.overlay({
     // content: 'Default overlay content',
     // debug: true,
     overlays: [{
-      content: '',
-      start: 60,
-      end: 120,
-      align: 'top-left',
-      showBackground: true,
-      class: 'overlay'
+    content: '',
+    start: 60,
+    end: 120,
+    align: 'top-left',
+    showBackground: true,
+    class: 'overlay'
     }]
-  });
+});
+
+// else {
+//     console.log('hello native!');
+//     var video = document.getElementById('ap-video');
+//     video.src = 'https://video.acharyaprashant.org/sarvasar-upanishad-part-one-video-5/playlist.m3u8';
+//     video.addEventListener('loadedmetadata', function() {
+//       video.play();
+//     });
+// }
+// setup beforeinitialize hook
+// videojs.Html5Hlsjs.addHook('beforeinitialize', (videojsPlayer, hlsjsInstance) => {
+//     // here you can interact with hls.js instance and/or video.js playback is initialized
+// });
+

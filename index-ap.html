@@ -4,10 +4,9 @@
     <title>Testing VideoJS - responsive</title>
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css" rel="stylesheet" />     -->
-    <link href="videojs-seek-buttons.css" rel="stylesheet" />
-    <link href="videojs-hls-quality-selector.css" rel="stylesheet" />
-    <link href="videojs-overlay.css" rel="stylesheet" />
-            
+    <link href="plugins/videojs-seek-buttons.css" rel="stylesheet" />
+    <link href="plugins/videojs-hls-quality-selector.css" rel="stylesheet" />
+    <link href="plugins/videojs-overlay.css" rel="stylesheet" />            
     
     <link href="ap.css" rel="stylesheet">
     <!-- 
@@ -23,14 +22,15 @@
 <body>
     <video id="ap-video" playsinline class="video-js vjs-theme-ap"></video>
 
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-    <!-- <script src="http://vjs.zencdn.net/6.6.3/video.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js"></script>
-    <script src="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js"></script> -->
+    <!-- <script src="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-    <script src="videojs-contrib-quality-levels.min.js"></script>
-    <script src="videojs-hls-quality-selector.js"></script>
-    <script src="videojs-overlay.js"></script>
+    <script src="plugins/videojs-contrib-quality-levels.min.js"></script>
+    <script src="plugins/videojs-hls-quality-selector.js"></script>
+    <script src="plugins/videojs-seek-buttons.js"></script>
+    <script src="plugins/videojs-overlay.js"></script>    
     <script src="main.js?v=0.5"></script>
     
 </body>
