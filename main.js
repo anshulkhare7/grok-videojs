@@ -20,7 +20,7 @@ var options = {
             }
     },
     //autoplay: 'muted',
-    inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)    
+    // inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)    
     //nativeControlsForTouch: true,        
 };
 
@@ -99,10 +99,10 @@ player.overlay({
 player.on('fullscreenchange', function(){
     if(this.isFullscreen() && screen.width < 470)
     {
-        console.log('Fullscreen On:'+screen.width)
+        // console.log('Fullscreen On:'+screen.width)
         player.addClass('fullscreen')
     }else{
-        console.log('Fullscreen Off: '+screen.width)
+        // console.log('Fullscreen Off: '+screen.width)
         player.removeClass('fullscreen')
     }
 })
