@@ -193,7 +193,18 @@
 } 
 */
 
-/*
+/* Modal dialog*/
+.vjs-theme-ap .vjs-persistent-modal .vjs-modal-dialog-content{
+    border: 2px solid var(--vjs-theme-ap--primary);
+    height: 35%;
+    width: 35%;
+    border-radius: 1rem;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1000;
+}
+
+/* Control panel seek buttons
 .vjs-theme-ap .vjs-seek-button,
 .vjs-theme-ap .vjs-seek-button:hover,
 .vjs-theme-ap .vjs-seek-button:focus{

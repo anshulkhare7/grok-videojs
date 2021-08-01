@@ -107,3 +107,54 @@ player.on('fullscreenchange', function(){
         player.removeClass('fullscreen')
     }
 })
+
+var longLivedModel = getLongLivedModel(player)
+var formSubmitted = false
+
+player.on('timeupdate', function() {
+    if (this.currentTime() >= 30 && !formSubmitted) {
+        console.log('Long live modal opening...')
+        longLivedModel.open();
+        this.pause()
+      }    
+});
+  
+// player.on('play', function() {
+//     console.log('Long live modal closing...')
+//     longLivedModel.close();
+// });
+
+// player.on('pause', function() {
+//     // Modals are temporary by default. They dispose themselves when they are
+//     // closed; so, we can create a new one each time the player is paused and
+//     // not worry about leaving extra nodes hanging around.
+//     var tempModal = player.createModal('This is a temporary modal!');    
+//     tempModal.on('modalclose', function() {
+//       player.play();
+//     });
+//   });
+
+function getLongLivedModel(player){
+    var ModalDialog = videojs.getComponent('ModalDialog');
+    var longLivedModelHtml = document.createElement('div');
+    longLivedModelHtml.innerHTML = '<form action="#" onSubmit="submitEmail(); return false;"><label for="email">Email:</label><input type="text" id="email" name="email" value="your@email.xyz"><input type="submit" value="Submit"></form>';
+    var modalOptions = {
+        // We don't want this modal to go away when it closes.
+        content: longLivedModelHtml,
+        pauseOnOpen: true,
+        temporary: false,
+        uncloseable: true
+    }
+    var longLivedModel = new ModalDialog(player, modalOptions);
+
+    player.addChild(longLivedModel);
+    longLivedModel.addClass('vjs-persistent-modal');
+    return longLivedModel;
+}
+
+function submitEmail()
+{
+    console.log('form submitted: '+player.currentTime)
+    formSubmitted = true
+    longLivedModel.close();    
+}
