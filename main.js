@@ -33,7 +33,8 @@ player.addClass('vjs-show-big-play-button-on-pause')
 
 //Prevent console error in Mozilla.
 player.src({
-    src: 'https://video.acharyaprashant.org/sarvasar-upanishad-part-one-video-5/playlist.m3u8',
+    src: 'https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8',
+    // src: 'https://video.acharyaprashant.org/sarvasar-upanishad-part-one-video-5/playlist.m3u8',
     type: 'application/x-mpegURL'
 });
 
