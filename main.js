@@ -1,4 +1,4 @@
-function myDoubleClickHandler(event) {
+function pauseOnDoubleClick(event) {
     // `this` is the player in this context  
     this.pause();
 };
@@ -11,7 +11,7 @@ var options = {
     responsive: true,
     playbackRates: [0.5, 1, 1.5, 2],    
     userActions: {
-        doubleClick: myDoubleClickHandler
+        doubleClick: pauseOnDoubleClick
     },
     poster: 'https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8.jpg',
     controlBar: {
@@ -20,14 +20,9 @@ var options = {
             }
     },
     //autoplay: 'muted',
-    // inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)
-    html5: {
-      
-    },    
+    inactivityTimeout: 0, //Prevents auto-hide player controls (helpful while debugging css)    
     //nativeControlsForTouch: true,        
 };
-
-
 
 var player = videojs('ap-video', options);
 
@@ -47,12 +42,45 @@ player.hlsQualitySelector({
     placementIndex: 0    
 });
 
+
+/*
 player.seekButtons({
     forward: 10,
     back: 10,
     forwardIndex: 1,
     backIndex: 0
 });
+*/
+
+//Overlay buttons - https://www.npmjs.com/package/videojs-overlay-buttons
+player.touchOverlay({
+    seekLeft: {
+      handleClick: () => {
+        const time = Number(player.currentTime()) - 10;
+  
+        player.currentTime(time);
+      },
+      doubleTap: true,
+    },
+    play: {
+      handleClick: () => {
+        if (player.paused()) {
+          player.play();
+        } else {
+          player.pause();
+        }
+      },
+    },
+    seekRight: {
+      handleClick: () => {
+        const time = Number(player.currentTime()) + 10;
+  
+        player.currentTime(time);
+      },
+      doubleTap: true,
+    },
+    lockButton: true
+  });
 
 //Brightcover overlay cards - https://www.npmjs.com/package/videojs-overlay
 player.overlay({
@@ -68,16 +96,13 @@ player.overlay({
     }]
 });
 
-// else {
-//     console.log('hello native!');
-//     var video = document.getElementById('ap-video');
-//     video.src = 'https://video.acharyaprashant.org/sarvasar-upanishad-part-one-video-5/playlist.m3u8';
-//     video.addEventListener('loadedmetadata', function() {
-//       video.play();
-//     });
-// }
-// setup beforeinitialize hook
-// videojs.Html5Hlsjs.addHook('beforeinitialize', (videojsPlayer, hlsjsInstance) => {
-//     // here you can interact with hls.js instance and/or video.js playback is initialized
-// });
-
+player.on('fullscreenchange', function(){
+    if(this.isFullscreen() && screen.width < 470)
+    {
+        console.log('Fullscreen On:'+screen.width)
+        player.addClass('fullscreen')
+    }else{
+        console.log('Fullscreen Off: '+screen.width)
+        player.removeClass('fullscreen')
+    }
+})

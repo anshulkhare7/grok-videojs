@@ -14,8 +14,8 @@
   }
 
   .vjs-theme-ap .vjs-control-bar {
-    font-size: 25px;
-    height: 70px;
+    font-size: 1.2rem;
+    height: 4.5rem;
     padding-top: 1.3rem;
     padding-left: 1rem;
     background: none;
@@ -124,7 +124,7 @@
 }
 
 .vjs-theme-ap .vjs-quality-selector button{
-    padding-bottom: 24px;
+    padding-bottom: 1.4rem;
 }
 
 .vjs-theme-ap .vjs-fullscreen-control{
@@ -133,6 +133,67 @@
     order: 4;
 }
 
+.vjs-theme-ap .vjs-button > .vjs-icon-placeholder::before {
+    line-height: 3rem;
+}
+
+.vjs-theme-ap .overlay {
+    height: 30%;
+    opacity: 60%;
+    background-image: url(https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.vjs-theme-ap .vjs-menu-button-popup .vjs-menu{
+    margin-bottom: 3rem;
+}
+
+.vjs-theme-ap .vjs-menu-button-popup .vjs-menu .vjs-menu-content{
+    bottom: 0rem;
+}
+
+/* Fullscreen tweaks*/
+.vjs-theme-ap.fullscreen .vjs-control-bar{
+    padding-left: 0rem;
+    font-size: 0.8rem;
+}
+
+.vjs-theme-ap.fullscreen .vjs-quality-selector{
+    font-size: 1.2rem;
+    right: 2rem;
+}
+
+.vjs-theme-ap.fullscreen .vjs-quality-selector button{
+    padding-bottom: 1.7rem;
+}
+
+.vjs-theme-ap.fullscreen .vjs-playback-rate{
+    right: 5.5rem;
+    font-size: 0.9rem;
+}
+
+.vjs-theme-ap.fullscreen .vjs-volume-panel.vjs-control.vjs-volume-panel-vertical{
+    right: 8rem;
+    font-size: 0.8rem;
+}
+
+.vjs-theme-ap.fullscreen .vjs-volume-control .vjs-control .vjs-volume-vertical{
+    width: 3.3rem;
+}
+
+/* .vjs-theme-ap.fullscreen .vjs-seek-button,
+.vjs-theme-ap.fullscreen .vjs-quality-selector{
+    display: none;
+}
+
+.vjs-theme-ap.fullscreen .vjs-control-bar{
+    padding-left: 0rem;
+    font-size: 0.8rem
+} 
+*/
+
+/*
 .vjs-theme-ap .vjs-seek-button,
 .vjs-theme-ap .vjs-seek-button:hover,
 .vjs-theme-ap .vjs-seek-button:focus{
@@ -156,16 +217,4 @@
 
 .vjs-theme-ap .vjs-seek-button.skip-forward{
     background-image: url(https://anshul-public-downloads.s3.ap-south-1.amazonaws.com/skip-fwd-10-white.png);
-}
-
-.vjs-theme-ap .vjs-button > .vjs-icon-placeholder::before {
-    line-height: 50px;
-}
-
-.vjs-theme-ap .overlay {
-    height: 30%;
-    opacity: 60%;
-    background-image: url(https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+}*/
