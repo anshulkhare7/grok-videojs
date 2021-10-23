@@ -13,7 +13,8 @@ var options = {
     userActions: {
         doubleClick: pauseOnDoubleClick
     },
-    poster: 'https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8.jpg',
+    // poster: 'https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8.jpg',
+    poster: 'https://vz-4df53096-bb3.b-cdn.net/d67eb94c-8ca5-45ec-8947-172a46bc5274/thumbnail.jpg',
     controlBar: {
             volumePanel: {
                 inline: false
@@ -33,8 +34,8 @@ player.addClass('vjs-show-big-play-button-on-pause')
 
 //Prevent console error in Mozilla.
 player.src({
-    src: 'https://video.acharyaprashant.org/sarvasar-upanishad/sarvasar-upanishad-video-2/playlist.m3u8',
-    // src: 'https://video.acharyaprashant.org/sarvasar-upanishad-part-one-video-5/playlist.m3u8',
+    // src: 'https://aptest.b-cdn.net/courses/2021-10-23/mergedvideo-out-f6e0eae/playlist.m3u8',
+    src: 'https://video1.acharyaprashant.org/navratri/navratri-video-2-24562/playlist.m3u8',
     type: 'application/x-mpegURL'
 });
 
