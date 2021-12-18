@@ -1,0 +1,25 @@
+<head>
+    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+  
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+  </head>
+  
+  <body>
+    <video id="ap-video" playsinline class="video-js"></video>      
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+    <script>
+        var options = {
+            width: 1080, 
+            height: 600, 
+            controls: true,        
+            poster: 'https://vz-4df53096-bb3.b-cdn.net/d67eb94c-8ca5-45ec-8947-172a46bc5274/thumbnail.jpg',    
+        };
+
+        var player = videojs('ap-video', options);
+
+        player.src({   
+            src: 'https://aptest.b-cdn.net/shorts/merged.mp4'    
+        });
+    </script>
+  </body>
