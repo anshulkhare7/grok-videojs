@@ -8,5 +8,6 @@ var options = {
 var player = videojs('ap-video', options);
 
 player.src({   
-    src: 'https://aptest.b-cdn.net/shorts/vid-01.mp4'    
+    src: 'https://anshultest.b-cdn.net/shorts/12-mb-video.mp4',
+    type: 'video/mp4'    
 });
