@@ -9,5 +9,5 @@ var player = videojs('ap-video', options);
 
 player.src({   
     src: 'https://anshultest.b-cdn.net/shorts/12-mb-video.mp4',
-    type: 'video/mp4'    
+    type: 'video/mp4'
 });
