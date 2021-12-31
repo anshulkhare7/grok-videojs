@@ -9,7 +9,7 @@
     <table>
         <tr>
         <td><strong>With Edge</strong><video id="ap-video-1" playsinline class="video-js"></video>      </td>
-        <td><strong>Edge</strong><video id="ap-video-2" playsinline class="video-js"></video>      </td>
+        <td><strong>No Edge</strong><video id="ap-video-2" playsinline class="video-js"></video>      </td>
         </tr>
     </table>      
     <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
@@ -23,13 +23,12 @@
         };
 
         var player1 = videojs('ap-video-1', options);
+        var player2 = videojs('ap-video-2', options);
 
         player1.src({   
             src: 'https://paftest.b-cdn.net/shorts/12-mb-video.mp4',
             type: 'video/mp4'    
         });
-
-        var player2 = videojs('ap-video-2', options);
 
         player2.src({   
             src: 'https://paftest-noedge.b-cdn.net/shorts/12-mb-video.mp4',
