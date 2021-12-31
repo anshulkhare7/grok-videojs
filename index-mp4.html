@@ -6,7 +6,12 @@
   </head>
   
   <body>
-    <video id="ap-video" playsinline class="video-js"></video>      
+    <table>
+        <tr>
+        <td><strong>With Edge</strong><video id="ap-video-1" playsinline class="video-js"></video>      </td>
+        <td><strong>Edge</strong><video id="ap-video-2" playsinline class="video-js"></video>      </td>
+        </tr>
+    </table>      
     <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
     <script>
         var options = {
@@ -17,10 +22,17 @@
             poster: 'https://vz-4df53096-bb3.b-cdn.net/d67eb94c-8ca5-45ec-8947-172a46bc5274/thumbnail.jpg',    
         };
 
-        var player = videojs('ap-video', options);
+        var player1 = videojs('ap-video-1', options);
 
-        player.src({   
-            src: 'https://anshultest.b-cdn.net/shorts/12-mb-video.mp4',
+        player1.src({   
+            src: 'https://paftest.b-cdn.net/shorts/12-mb-video.mp4',
+            type: 'video/mp4'    
+        });
+
+        var player2 = videojs('ap-video-2', options);
+
+        player2.src({   
+            src: 'https://paftest-noedge.b-cdn.net/shorts/12-mb-video.mp4',
             type: 'video/mp4'    
         });
     </script>
