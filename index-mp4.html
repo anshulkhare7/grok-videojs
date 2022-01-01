@@ -10,13 +10,14 @@
         <tr>
         <td><strong>With Edge</strong><video id="ap-video-1" playsinline class="video-js"></video>      </td>
         <td><strong>No Edge</strong><video id="ap-video-2" playsinline class="video-js"></video>      </td>
+        <td><strong>AWS</strong><video id="ap-video-3" playsinline class="video-js"></video>      </td>
         </tr>
     </table>      
     <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
     <script>
         var options = {
-            width: 500, 
-            height: 640, 
+            width: 250, 
+            height: 320, 
             controls: true,       
             autoplay: 'muted', 
             poster: 'https://vz-4df53096-bb3.b-cdn.net/d67eb94c-8ca5-45ec-8947-172a46bc5274/thumbnail.jpg',    
@@ -24,6 +25,7 @@
 
         var player1 = videojs('ap-video-1', options);
         var player2 = videojs('ap-video-2', options);
+        var player3 = videojs('ap-video-3', options);
 
         player1.src({   
             src: 'https://paftest.b-cdn.net/shorts/12-mb-video.mp4',
@@ -34,5 +36,11 @@
             src: 'https://paftest-noedge.b-cdn.net/shorts/12-mb-video.mp4',
             type: 'video/mp4'    
         });
+
+        player3.src({   
+            src: 'https://d1a3ted8fhshdi.cloudfront.net/12-mb-video.mp4',
+            type: 'video/mp4'    
+        });
+
     </script>
   </body>
